@@ -83,7 +83,7 @@ export default function Page() {
                <Image src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800" alt="Fern leaf" fill className="object-cover" referrerPolicy="no-referrer" />
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity">
-               <Image src="https://images.unsplash.com/photo-1516214104703-d2507f627242?auto=format&fit=crop&q=80&w=800" alt="Editing desk" fill className="object-cover" referrerPolicy="no-referrer" />
+               <Image src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=800" alt="Editing desk" fill className="object-cover" referrerPolicy="no-referrer" />
             </div>
           </div>
         </section>
