@@ -189,8 +189,8 @@ export default function Page() {
 
       {/* BIG BOTTOM LOGO */}
       <div className="px-4 md:px-8 lg:px-12 pb-12 w-full max-w-[2000px] mx-auto">
-         <div className="bg-[#171512] rounded-[1.5rem] md:rounded-[3.5rem] w-full py-10 md:py-20 px-8 flex items-center justify-center overflow-hidden">
-            <h1 className="font-clash font-black text-[clamp(2.5rem,14.5vw,28rem)] leading-none text-[#d9cebe] tracking-tighter uppercase w-full flex justify-between h-auto pb-4 md:pb-8">
+         <div className="bg-[#171512] rounded-[1.5rem] md:rounded-[3.5rem] w-full py-10 md:py-20 px-4 md:px-8 flex items-center justify-center overflow-hidden">
+            <h1 className="font-clash font-black text-[clamp(2.5rem,11vw,24rem)] leading-none text-[#d9cebe] tracking-tighter uppercase text-center w-full h-auto pb-4 md:pb-8">
               PHOTOGRAPHY
             </h1>
          </div>
