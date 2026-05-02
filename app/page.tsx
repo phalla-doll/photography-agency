@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { ParallaxImage } from "@/components/parallax-image";
 
 export default function Page() {
   return (
@@ -45,21 +46,18 @@ export default function Page() {
             </button>
           </div>
           {/* Right Image */}
-          <div className="md:col-span-8 relative rounded-2xl overflow-hidden h-[400px] md:h-[600px]">
-            <Image 
-              src="https://images.unsplash.com/photo-1506795660198-e95c77602129?auto=format&fit=crop&q=80&w=2000"
-              alt="Photographer at work"
-              fill
-              className="object-cover"
-              referrerPolicy="no-referrer"
-            />
+          <ParallaxImage 
+            containerClassName="md:col-span-8 relative rounded-2xl overflow-hidden h-[400px] md:h-[600px]"
+            src="https://images.unsplash.com/photo-1506795660198-e95c77602129?auto=format&fit=crop&q=80&w=2000"
+            alt="Photographer at work"
+          >
             {/* Wheat icon in bottom right */}
-            <div className="absolute bottom-6 right-6 w-12 h-16 border-2 border-white/30 rounded-full flex flex-col items-center justify-center p-2 opacity-80 mix-blend-overlay">
+            <div className="absolute bottom-6 right-6 w-12 h-16 border-2 border-white/30 rounded-full flex flex-col items-center justify-center p-2 opacity-80 mix-blend-overlay pointer-events-auto">
                <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" className="w-full h-full">
                  <path d="M12 22V2M12 12c-2-2-4-1-4-1s2-1 4-1M12 16c-3-2-5-1-5-1s2-1 5-1M12 8c-2-2-4-1-4-1s2-1 4-1" />
                </svg>
             </div>
-          </div>
+          </ParallaxImage>
         </section>
 
         {/* ABOUT SECTION */}
@@ -76,15 +74,21 @@ export default function Page() {
           </div>
           {/* 3 Images row */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity">
-               <Image src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" alt="Camera lens close up" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity">
-               <Image src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800" alt="Fern leaf" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity">
-               <Image src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=800" alt="Editing desk" fill className="object-cover" referrerPolicy="no-referrer" />
-            </div>
+            <ParallaxImage 
+              containerClassName="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=800" 
+              alt="Camera lens close up" 
+            />
+            <ParallaxImage 
+              containerClassName="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=800" 
+              alt="Fern leaf" 
+            />
+            <ParallaxImage 
+              containerClassName="relative aspect-[4/3] rounded-2xl overflow-hidden hover:opacity-90 transition-opacity"
+              src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?auto=format&fit=crop&q=80&w=800" 
+              alt="Editing desk" 
+            />
           </div>
         </section>
 
@@ -98,29 +102,44 @@ export default function Page() {
             </h2>
             <div className="space-y-4">
               {/* Strip 1 */}
-              <div className="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer">
-                <Image src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=2000" fill alt="Art Director" className="object-cover mix-blend-overlay opacity-60 group-hover:scale-[1.02] transition-transform duration-[1.5s] ease-out" referrerPolicy="no-referrer" />
-                <div className="relative h-full flex justify-between items-center px-6 md:px-12 lg:px-16 font-clash font-bold uppercase tracking-wider">
+              <ParallaxImage 
+                containerClassName="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer"
+                src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=2000" 
+                alt="Art Director" 
+                imageClassName="mix-blend-overlay opacity-60 group-hover:scale-[1.05] transition-transform duration-[1.5s] ease-out"
+                parallaxOffset={12}
+              >
+                <div className="relative h-full flex justify-between items-center px-6 md:px-12 lg:px-16 font-clash font-bold uppercase tracking-wider pointer-events-auto">
                   <span className="text-3xl md:text-5xl lg:text-7xl text-white drop-shadow-xl z-10">ART DIRECTOR</span>
                   <span className="text-lg md:text-3xl font-satoshi font-bold text-white drop-shadow-xl z-10">2021</span>
                 </div>
-              </div>
+              </ParallaxImage>
               {/* Strip 2 */}
-              <div className="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer">
-                <Image src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2000" fill alt="Photographer" className="object-cover mix-blend-overlay opacity-60 group-hover:scale-[1.02] transition-transform duration-[1.5s] ease-out" referrerPolicy="no-referrer" />
-                <div className="relative h-full flex justify-between items-center px-6 md:px-12 lg:px-16 font-clash font-bold uppercase tracking-wider">
+              <ParallaxImage 
+                containerClassName="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer"
+                src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=2000" 
+                alt="Photographer" 
+                imageClassName="mix-blend-overlay opacity-60 group-hover:scale-[1.05] transition-transform duration-[1.5s] ease-out"
+                parallaxOffset={12}
+              >
+                <div className="relative h-full flex justify-between items-center px-6 md:px-12 lg:px-16 font-clash font-bold uppercase tracking-wider pointer-events-auto">
                   <span className="text-lg md:text-3xl font-satoshi font-bold text-white drop-shadow-xl z-10">2021</span>
                   <span className="text-3xl md:text-5xl lg:text-7xl text-white drop-shadow-xl z-10">PHOTOGRAPHER</span>
                 </div>
-              </div>
+              </ParallaxImage>
               {/* Strip 3 */}
-              <div className="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer">
-                <Image src="https://images.unsplash.com/photo-1601552553952-4148eec26f56?auto=format&fit=crop&q=80&w=2000" fill alt="Videographer" className="object-cover mix-blend-overlay opacity-60 group-hover:scale-[1.02] transition-transform duration-[1.5s] ease-out" referrerPolicy="no-referrer" />
-                <div className="relative h-full flex justify-between items-center px-6 md:px-12 lg:px-16 font-clash font-bold uppercase tracking-wider">
+              <ParallaxImage 
+                containerClassName="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer"
+                src="https://images.unsplash.com/photo-1601552553952-4148eec26f56?auto=format&fit=crop&q=80&w=2000" 
+                alt="Videographer" 
+                imageClassName="mix-blend-overlay opacity-60 group-hover:scale-[1.05] transition-transform duration-[1.5s] ease-out"
+                parallaxOffset={12}
+              >
+                <div className="relative h-full flex justify-between items-center px-6 md:px-12 lg:px-16 font-clash font-bold uppercase tracking-wider pointer-events-auto">
                   <span className="text-3xl md:text-5xl lg:text-7xl text-white drop-shadow-xl z-10">VIDEOGRAPHER</span>
                   <span className="text-lg md:text-3xl font-satoshi font-bold text-white drop-shadow-xl z-10">2022</span>
                 </div>
-              </div>
+              </ParallaxImage>
             </div>
          </div>
       </section>
@@ -141,29 +160,42 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-[auto_auto_auto] gap-4">
           
           {/* Top Left (Road) */}
-          <div className="md:col-span-4 md:row-span-1 relative h-[400px] md:h-auto rounded-2xl overflow-hidden aspect-[4/5] object-cover hover:opacity-95 transition-opacity">
-             <Image src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800" alt="Mountain Road" fill className="object-cover" referrerPolicy="no-referrer" />
-          </div>
+          <ParallaxImage 
+             containerClassName="md:col-span-4 md:row-span-1 relative h-[400px] md:h-auto rounded-2xl overflow-hidden aspect-[4/5] object-cover hover:opacity-95 transition-opacity"
+             src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800" 
+             alt="Mountain Road" 
+          />
 
           {/* Top Middle (Portrait) */}
-          <div className="md:col-span-4 md:row-span-1 relative h-[350px] md:h-auto rounded-2xl overflow-hidden aspect-square self-end hover:opacity-95 transition-opacity">
-             <Image src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?auto=format&fit=crop&q=80&w=800" alt="Fashion Portrait" fill className="object-cover" referrerPolicy="no-referrer" />
-          </div>
+          <ParallaxImage 
+             containerClassName="md:col-span-4 md:row-span-1 relative h-[350px] md:h-auto rounded-2xl overflow-hidden aspect-square self-end hover:opacity-95 transition-opacity"
+             src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?auto=format&fit=crop&q=80&w=800" 
+             alt="Fashion Portrait" 
+          />
 
           {/* Right Tall (Interior) spans 2 rows */}
-          <div className="md:col-span-4 md:row-span-2 relative h-[500px] md:h-full rounded-2xl overflow-hidden aspect-[2/3] md:aspect-auto hover:opacity-95 transition-opacity">
-             <Image src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200" alt="Interior Design" fill className="object-cover" referrerPolicy="no-referrer" />
-          </div>
+          <ParallaxImage 
+             containerClassName="md:col-span-4 md:row-span-2 relative h-[500px] md:h-full rounded-2xl overflow-hidden aspect-[2/3] md:aspect-auto hover:opacity-95 transition-opacity"
+             src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200" 
+             alt="Interior Design" 
+          />
 
           {/* Middle Left Wide (Desk) */}
-          <div className="md:col-span-8 md:row-span-1 relative h-[300px] md:h-auto rounded-2xl overflow-hidden aspect-[16/7] hover:opacity-95 transition-opacity">
-             <Image src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=1600" alt="Desk setup" fill className="object-cover" referrerPolicy="no-referrer" />
-          </div>
+          <ParallaxImage 
+             containerClassName="md:col-span-8 md:row-span-1 relative h-[300px] md:h-auto rounded-2xl overflow-hidden aspect-[16/7] hover:opacity-95 transition-opacity"
+             src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=1600" 
+             alt="Desk setup" 
+          />
 
           {/* Bottom Full Wide (Sculpture) */}
           <div className="md:col-span-12 md:row-span-1 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden hover:opacity-95 transition-opacity pt-4">
              <div className="relative w-full h-full rounded-2xl overflow-hidden mt-4">
-               <Image src="https://images.unsplash.com/photo-1544365558-35aa4afcf11f?auto=format&fit=crop&q=80&w=2400" alt="Carved Sculpture" fill className="object-cover" referrerPolicy="no-referrer" />
+               <ParallaxImage 
+                 containerClassName="absolute inset-0"
+                 src="https://images.unsplash.com/photo-1544365558-35aa4afcf11f?auto=format&fit=crop&q=80&w=2400" 
+                 alt="Carved Sculpture" 
+                 parallaxOffset={12}
+               />
              </div>
           </div>
         </div>
