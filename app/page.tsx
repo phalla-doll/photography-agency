@@ -14,9 +14,9 @@ export default function Page() {
             <span className="w-6 h-6 border-2 border-brand-dark rounded-full flex items-center justify-center text-xs">C</span>
             PHOTOGRAPHY
           </div>
-          <nav className="hidden md:flex gap-4">
+          <nav className="hidden md:flex gap-2 lg:gap-3">
             {['About', 'Gallery', 'Project', 'Contact'].map(item => (
-              <button key={item} className="px-6 py-1.5 rounded-full border border-brand-dark/20 text-sm hover:bg-brand-dark hover:text-brand-bg transition-colors">
+              <button key={item} className="px-5 py-1.5 rounded-full border border-brand-dark/30 text-[14px] md:text-sm font-medium hover:bg-brand-dark hover:text-brand-bg transition-colors">
                 {item}
               </button>
             ))}
