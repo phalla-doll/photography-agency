@@ -145,7 +145,7 @@ export default function Page() {
       </section>
 
       {/* PROJECTS (Light Section) */}
-      <section className="pt-16 md:pt-32 pb-8 md:pb-12 px-4 md:px-8 lg:px-12 max-w-[1600px] mx-auto">
+      <section className="pt-16 md:pt-32 pb-0 px-4 md:px-8 lg:px-12 max-w-[1600px] mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b-[3px] border-brand-dark pb-4 mb-8 md:mb-12 gap-4">
           <h2 className="font-clash font-black text-[clamp(3.5rem,8.5vw,9rem)] tracking-tighter uppercase leading-[0.85]">
             PROJECTS
@@ -202,7 +202,7 @@ export default function Page() {
       </section>
 
       {/* FOOTER */}
-      <footer className="px-4 md:px-8 lg:px-12 pt-8 md:pt-12 pb-16 md:pb-24 max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-start gap-16 md:gap-12">
+      <footer className="px-4 md:px-8 lg:px-12 pt-0 pb-16 md:pb-24 max-w-[1600px] mx-auto flex flex-col md:flex-row justify-between items-start gap-16 md:gap-12">
         <div className="flex flex-col gap-2">
            <h3 className="font-clash font-bold text-5xl md:text-6xl lg:text-7xl flex items-center gap-2 lg:gap-4 mb-2">
               Say hello 
