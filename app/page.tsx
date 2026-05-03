@@ -161,41 +161,56 @@ export default function Page() {
           
           {/* Top Left (Road) */}
           <ParallaxImage 
-             containerClassName="md:col-span-4 md:row-span-1 relative h-[400px] md:h-auto rounded-2xl overflow-hidden aspect-[4/5] object-cover hover:opacity-95 transition-opacity"
+             containerClassName="group md:col-span-4 md:row-span-1 relative h-[400px] md:h-auto rounded-2xl overflow-hidden aspect-[4/5] cursor-pointer"
+             imageClassName="group-hover:scale-105 transition-transform duration-700 ease-out"
              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800" 
              alt="Mountain Road" 
-          />
+          >
+             <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/10 transition-colors duration-700 z-10 pointer-events-none" />
+          </ParallaxImage>
 
           {/* Top Middle (Portrait) */}
           <ParallaxImage 
-             containerClassName="md:col-span-4 md:row-span-1 relative h-[350px] md:h-auto rounded-2xl overflow-hidden aspect-square self-end hover:opacity-95 transition-opacity"
+             containerClassName="group md:col-span-4 md:row-span-1 relative h-[350px] md:h-auto rounded-2xl overflow-hidden aspect-square self-end cursor-pointer"
+             imageClassName="group-hover:scale-105 transition-transform duration-700 ease-out"
              src="https://images.unsplash.com/photo-1542156822-6924d1a71ace?auto=format&fit=crop&q=80&w=800" 
              alt="Fashion Portrait" 
-          />
+          >
+             <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/10 transition-colors duration-700 z-10 pointer-events-none" />
+          </ParallaxImage>
 
           {/* Right Tall (Interior) spans 2 rows */}
           <ParallaxImage 
-             containerClassName="md:col-span-4 md:row-span-2 relative h-[500px] md:h-full rounded-2xl overflow-hidden aspect-[2/3] md:aspect-auto hover:opacity-95 transition-opacity"
+             containerClassName="group md:col-span-4 md:row-span-2 relative h-[500px] md:h-full rounded-2xl overflow-hidden aspect-[2/3] md:aspect-auto cursor-pointer"
+             imageClassName="group-hover:scale-105 transition-transform duration-700 ease-out"
              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200" 
              alt="Interior Design" 
-          />
+          >
+             <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/10 transition-colors duration-700 z-10 pointer-events-none" />
+          </ParallaxImage>
 
           {/* Middle Left Wide (Desk) */}
           <ParallaxImage 
-             containerClassName="md:col-span-8 md:row-span-1 relative h-[300px] md:h-auto rounded-2xl overflow-hidden aspect-[16/7] hover:opacity-95 transition-opacity"
+             containerClassName="group md:col-span-8 md:row-span-1 relative h-[300px] md:h-auto rounded-2xl overflow-hidden aspect-[16/7] cursor-pointer"
+             imageClassName="group-hover:scale-105 transition-transform duration-700 ease-out"
              src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&q=80&w=1600" 
              alt="Desk setup" 
-          />
+          >
+             <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/10 transition-colors duration-700 z-10 pointer-events-none" />
+          </ParallaxImage>
 
           {/* Bottom Full Wide (Sculpture) */}
-          <div className="md:col-span-12 md:row-span-1 relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden hover:opacity-95 transition-opacity pt-4">
-             <div className="relative w-full h-full rounded-2xl overflow-hidden mt-4">
+          <div className="md:col-span-12 md:row-span-1 relative h-[400px] md:h-[600px] pt-4">
+             <div className="relative w-full h-full rounded-2xl overflow-hidden mt-4 group cursor-pointer">
                <ParallaxImage 
                  containerClassName="absolute inset-0"
+                 imageClassName="group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                  src="https://images.unsplash.com/photo-1544365558-35aa4afcf11f?auto=format&fit=crop&q=80&w=2400" 
                  alt="Carved Sculpture" 
                  parallaxOffset={12}
-               />
+               >
+                 <div className="absolute inset-0 bg-brand-dark/0 group-hover:bg-brand-dark/20 transition-colors duration-700 z-10 pointer-events-none" />
+               </ParallaxImage>
              </div>
           </div>
         </div>
