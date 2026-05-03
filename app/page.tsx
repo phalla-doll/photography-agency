@@ -130,7 +130,7 @@ export default function Page() {
               {/* Strip 3 */}
               <ParallaxImage 
                 containerClassName="relative h-32 md:h-48 lg:h-56 group overflow-hidden rounded-2xl bg-[#2a2a2a] cursor-pointer"
-                src="https://images.unsplash.com/photo-1601552553952-4148eec26f56?auto=format&fit=crop&q=80&w=2000" 
+                src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=2000" 
                 alt="Videographer" 
                 imageClassName="mix-blend-overlay opacity-60 group-hover:scale-[1.05] transition-transform duration-[1.5s] ease-out"
                 parallaxOffset={12}
